@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collection — Luxury Diamond Jewelry | Bez Ambar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="announcement-bar">
+        Mother's Day is May 10th — <a href="mothers_day_landing_page">Shop the Mother's Day Collection</a>
+    </div>
+
+    <header class="site-header">
+        <div class="header-inner">
+            <button class="mobile-nav-toggle" onclick="toggleMobileNav()" aria-label="Menu"><span></span><span></span><span></span></button>
+            <nav class="header-left">
+                <div class="nav-dropdown">
+                    <a href="collection.html" class="active">Collection</a>
+                    <div class="dropdown-menu">
+                        <span class="dropdown-label">Categories</span>
+                        <a href="collection.html">All Jewelry</a>
+                        <a href="collection.html?cat=rings">Rings</a>
+                        <a href="collection.html?cat=pendants">Pendants</a>
+                        <a href="collection.html?cat=necklaces">Necklaces</a>
+                        <a href="collection.html?cat=earrings">Earrings</a>
+                        <a href="collection.html?cat=bracelets">Bracelets</a>
+                    </div>
+                </div>
+                <a href="about.html">The Inventor</a>
+                <a href="journal.html">Journal</a>
+            </nav>
+            <a href="index.html" class="logo">Bez Ambar</a>
+            <div class="header-right">
+                <a href="contact.html">Contact</a>
+                <a href="contact.html" class="header-contact-btn">Book a Consultation</a>
+            </div>
+        </div>
+    </header>
+    <div class="mobile-nav-overlay" id="mobileNav">
+        <a href="collection.html">Collection</a>
+        <span class="mobile-cat-label">Categories</span>
+        <a href="collection.html" class="mobile-cat-link">All Jewelry</a>
+        <a href="collection.html?cat=rings" class="mobile-cat-link">Rings</a>
+        <a href="collection.html?cat=pendants" class="mobile-cat-link">Pendants</a>
+        <a href="collection.html?cat=necklaces" class="mobile-cat-link">Necklaces</a>
+        <a href="collection.html?cat=earrings" class="mobile-cat-link">Earrings</a>
+        <a href="collection.html?cat=bracelets" class="mobile-cat-link">Bracelets</a>
+        <a href="about.html">The Inventor</a>
+        <a href="journal.html">Journal</a>
+        <a href="contact.html">Contact</a>
+        <a href="contact.html" class="mobile-consult-btn">Book a Consultation</a>
+    </div>
+
+    <!-- LV-Style Category Bar -->
+    <div class="lv-collection-bar">
+        <div class="lv-cat-dropdown" id="catDropdown">
+            <button onclick="document.getElementById('catDropdown').classList.toggle('open')">
+                <span id="catLabel">All Jewelry</span>
+                <svg viewBox="0 0 10 6" fill="none"><path d="M1 1 L5 5 L9 1" stroke="currentColor" stroke-width="1.2"/></svg>
+            </button>
+            <div class="lv-cat-menu">
+                <span class="cat-label">Categories</span>
+                <a href="#" class="active-cat" onclick="filterLV('all', 'All Jewelry', event)">All Jewelry</a>
+                <a href="#" onclick="filterLV('rings', 'Rings', event)">Rings</a>
+                <a href="#" onclick="filterLV('pendants', 'Pendants', event)">Pendants</a>
+                <a href="#" onclick="filterLV('necklaces', 'Necklaces', event)">Necklaces</a>
+                <a href="#" onclick="filterLV('earrings', 'Earrings', event)">Earrings</a>
+                <a href="#" onclick="filterLV('bracelets', 'Bracelets', event)">Bracelets</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- LV-Style Product Grid -->
+    <div class="lv-collection-grid" id="productGrid">
+
+        <!-- 1: Family Signature Pendant -->
+        <a href="product.html?id=family-pendant" class="lv-product-card" data-category="pendants">
+            <div class="lv-card-img">
+                <!-- Replace with: <img src="[IMG]" alt="Family Signature Pendant"> -->
+                <div class="image-placeholder"><p>Family Signature Pendant</p></div>
+            </div>
+            <svg class="lv-card-wishlist" viewBox="0 0 24 24" fill="none"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="currentColor" stroke-width="1.5"/></svg>
+            <div class="lv-card-info">
+                <h3>Family Signature Pendant</h3>
+                <p class="lv-card-price">Starting from $5,000</p>
+            </div>
+        </a>
+
+        <!-- 2: The Heart Ruby -->
+        <a href="product.html?id=heart-ruby" class="lv-product-card" data-category="pendants">
+            <div class="lv-card-img">
+                <!-- Replace with: <img src="[IMG]" alt="The Heart Ruby"> -->
+                <div class="image-placeholder"><p>The Heart Ruby</p></div>
+            </div>
+            <svg class="lv-card-wishlist" viewBox="0 0 24 24" fill="none"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="currentColor" stroke-width="1.5"/></svg>
+            <div class="lv-card-info">
+                <h3>The Heart Ruby</h3>
+                <p class="lv-card-price">Price Upon Request</p>
+            </div>
+        </a>
+
+        <!-- 3: Blaze Diamond Pendant -->
+        <a href="product.html?id=blaze-pendant" class="lv-product-card" data-category="pendants">
+            <div class="lv-card-img">
+                <!-- Replace with: <img src="[IMG]" alt="Blaze Diamond Pendant"> -->
+                <div class="image-placeholder"><p>Blaze Diamond Pendant</p></div>
+            </div>
+            <svg class="lv-card-wishlist" viewBox="0 0 24 24" fill="none"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="currentColor" stroke-width="1.5"/></svg>
+            <div class="lv-card-info">
+                <h3>Blaze Diamond Pendant</h3>
+                <p class="lv-card-price">Starting from $3,000</p>
+            </div>
+        </a>
+
+        <!-- 4: Princess Cut Ring -->
+        <a href="product.html?id=princess-ring" class="lv-product-card" data-category="rings">
+            <div class="lv-card-img">
+                <!-- Replace with: <img src="[IMG]" alt="Princess Cut Ring"> -->
+                <div class="image-placeholder"><p>Princess Cut Ring</p></div>
+            </div>
+            <svg class="lv-card-wishlist" viewBox="0 0 24 24" fill="none"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="currentColor" stroke-width="1.5"/></svg>
+            <div class="lv-card-info">
+                <h3>Princess Cut Ring</h3>
+                <p class="lv-card-price">Starting from $5,500</p>
+            </div>
+        </a>
+
+        <!-- 5: Alara Stud Earrings -->
+        <a href="product.html?id=alara-studs" class="lv-product-card" data-category="earrings">
+            <div class="lv-card-img">
+                <!-- Replace with: <img src="[IMG]" alt="Alara Stud Earrings"> -->
+                <div class="image-placeholder"><p>Alara Stud Earrings</p></div>
+            </div>
+            <svg class="lv-card-wishlist" viewBox="0 0 24 24" fill="none"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="currentColor" stroke-width="1.5"/></svg>
+            <div class="lv-card-info">
+                <h3>Alara Stud Earrings</h3>
+                <p class="lv-card-price">Starting from $4,500</p>
+            </div>
+        </a>
+
+        <!-- 6: Diamond Tennis Bracelet -->
+        <a href="product.html?id=tennis-bracelet" class="lv-product-card" data-category="bracelets">
+            <div class="lv-card-img">
+                <!-- Replace with: <img src="[IMG]" alt="Diamond Tennis Bracelet"> -->
+                <div class="image-placeholder"><p>Diamond Tennis Bracelet</p></div>
+            </div>
+            <svg class="lv-card-wishlist" viewBox="0 0 24 24" fill="none"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="currentColor" stroke-width="1.5"/></svg>
+            <div class="lv-card-info">
+                <h3>Diamond Tennis Bracelet</h3>
+                <p class="lv-card-price">Starting from $8,000</p>
+            </div>
+        </a>
+
+        <!-- 7: Blaze Halo Necklace -->
+        <a href="product.html?id=blaze-necklace" class="lv-product-card" data-category="necklaces">
+            <div class="lv-card-img">
+                <!-- Replace with: <img src="[IMG]" alt="Blaze Halo Necklace"> -->
+                <div class="image-placeholder"><p>Blaze Halo Necklace</p></div>
+            </div>
+            <svg class="lv-card-wishlist" viewBox="0 0 24 24" fill="none"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="currentColor" stroke-width="1.5"/></svg>
+            <div class="lv-card-info">
+                <h3>Blaze Halo Necklace</h3>
+                <p class="lv-card-price">Starting from $6,000</p>
+            </div>
+        </a>
+
+        <!-- 8: Alara Drop Earrings -->
+        <a href="product.html?id=alara-drops" class="lv-product-card" data-category="earrings">
+            <div class="lv-card-img">
+                <!-- Replace with: <img src="[IMG]" alt="Alara Drop Earrings"> -->
+                <div class="image-placeholder"><p>Alara Drop Earrings</p></div>
+            </div>
+            <svg class="lv-card-wishlist" viewBox="0 0 24 24" fill="none"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="currentColor" stroke-width="1.5"/></svg>
+            <div class="lv-card-info">
+                <h3>Alara Drop Earrings</h3>
+                <p class="lv-card-price">Starting from $5,000</p>
+            </div>
+        </a>
+
+        <!-- 9: Blaze Engagement Ring -->
+        <a href="product.html?id=blaze-engagement" class="lv-product-card" data-category="rings">
+            <div class="lv-card-img">
+                <!-- Replace with: <img src="[IMG]" alt="Blaze Engagement Ring"> -->
+                <div class="image-placeholder"><p>Blaze Engagement Ring</p></div>
+            </div>
+            <svg class="lv-card-wishlist" viewBox="0 0 24 24" fill="none"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="currentColor" stroke-width="1.5"/></svg>
+            <div class="lv-card-info">
+                <h3>Blaze Engagement Ring</h3>
+                <p class="lv-card-price">Starting from $7,500</p>
+            </div>
+        </a>
+
+        <!-- 10: Quadrillion Diamond Ring -->
+        <a href="product.html?id=quadrillion-ring" class="lv-product-card" data-category="rings">
+            <div class="lv-card-img">
+                <!-- Replace with: <img src="[IMG]" alt="Quadrillion Diamond Ring"> -->
+                <div class="image-placeholder"><p>Quadrillion Diamond Ring</p></div>
+            </div>
+            <svg class="lv-card-wishlist" viewBox="0 0 24 24" fill="none"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="currentColor" stroke-width="1.5"/></svg>
+            <div class="lv-card-info">
+                <h3>Quadrillion Diamond Ring</h3>
+                <p class="lv-card-price">Starting from $6,200</p>
+            </div>
+        </a>
+
+        <!-- 11: Blaze Diamond Bracelet -->
+        <a href="product.html?id=blaze-bracelet" class="lv-product-card" data-category="bracelets">
+            <div class="lv-card-img">
+                <!-- Replace with: <img src="[IMG]" alt="Blaze Diamond Bracelet"> -->
+                <div class="image-placeholder"><p>Blaze Diamond Bracelet</p></div>
+            </div>
+            <svg class="lv-card-wishlist" viewBox="0 0 24 24" fill="none"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="currentColor" stroke-width="1.5"/></svg>
+            <div class="lv-card-info">
+                <h3>Blaze Diamond Bracelet</h3>
+                <p class="lv-card-price">Starting from $9,500</p>
+            </div>
+        </a>
+
+        <!-- 12: Princess Halo Earrings -->
+        <a href="product.html?id=princess-earrings" class="lv-product-card" data-category="earrings">
+            <div class="lv-card-img">
+                <!-- Replace with: <img src="[IMG]" alt="Princess Halo Earrings"> -->
+                <div class="image-placeholder"><p>Princess Halo Earrings</p></div>
+            </div>
+            <svg class="lv-card-wishlist" viewBox="0 0 24 24" fill="none"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="currentColor" stroke-width="1.5"/></svg>
+            <div class="lv-card-info">
+                <h3>Princess Halo Earrings</h3>
+                <p class="lv-card-price">Starting from $5,800</p>
+            </div>
+        </a>
+
+    </div>
+
+    <!-- CTA -->
+    <section class="promo-banner">
+        <div class="promo-inner">
+            <p class="eyebrow">Can't Find What You're Looking For?</p>
+            <h2>Let's Create It Together</h2>
+            <p class="promo-sub">Every Bez Ambar piece can be customized. Tell us your vision and we'll bring it to life.</p>
+            <a href="contact.html" class="btn btn-primary">Start a Bespoke Design</a>
+        </div>
+    </section>
+
+    <!-- Services + Footer -->
+    <div class="services-strip">
+        <div class="services-inner">
+            <div class="service-item"><h4>Bespoke Design</h4><p>One-of-a-kind pieces<br>designed with you</p></div>
+            <div class="service-item"><h4>Complimentary Shipping</h4><p>Fully insured FedEx<br>Priority delivery</p></div>
+            <div class="service-item"><h4>Provenance Certificate</h4><p>Signed certificate<br>with every piece</p></div>
+            <div class="service-item"><h4>LA Atelier</h4><p>Visit us by appointment<br>611 Wilshire Blvd</p></div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-top">
+                <div class="footer-col"><h4>Explore</h4><a href="collection.html">Collection</a><a href="about.html">The Inventor</a><a href="journal.html">Journal</a><a href="mothers_day_landing_page">Mother's Day</a></div>
+                <div class="footer-col"><h4>Services</h4><a href="contact.html">Bespoke Design</a><a href="contact.html">Repairs &amp; Cleaning</a><a href="contact.html">Personalization</a></div>
+                <div class="footer-col"><h4>Help</h4><a href="contact.html">Contact Us</a><a href="mailto:bez@bezambar.com">Email Us</a><a href="https://www.bezambar.com" target="_blank">Legacy Website</a></div>
+                <div class="footer-col"><h4>Visit</h4><p>611 Wilshire Blvd</p><p>Los Angeles, CA 90017</p><p style="margin-top:8px;"><a href="mailto:bez@bezambar.com">bez@bezambar.com</a></p></div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-logo">BEZ AMBAR</div>
+                <div class="footer-legal">&copy; 2026 Bez Ambar Inc. All rights reserved. &middot; <a href="#">Privacy Policy</a> &middot; <a href="#">Terms</a></div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // LV-style category filter
+        function filterLV(category, label, e) {
+            e.preventDefault();
+            document.getElementById('catLabel').textContent = label;
+            document.getElementById('catDropdown').classList.remove('open');
+
+            // Update active state
+            document.querySelectorAll('.lv-cat-menu a').forEach(a => a.classList.remove('active-cat'));
+            e.target.classList.add('active-cat');
+
+            // Filter products
+            document.querySelectorAll('.lv-product-card').forEach(card => {
+                if (category === 'all' || card.dataset.category === category) {
+                    card.style.display = '';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(e) {
+            const dropdown = document.getElementById('catDropdown');
+            if (!dropdown.contains(e.target)) {
+                dropdown.classList.remove('open');
+            }
+        });
+
+        // Handle URL params for category pre-filtering
+        (function() {
+            const params = new URLSearchParams(window.location.search);
+            const cat = params.get('cat');
+            if (cat) {
+                const labels = { rings: 'Rings', pendants: 'Pendants', necklaces: 'Necklaces', earrings: 'Earrings', bracelets: 'Bracelets' };
+                if (labels[cat]) {
+                    document.getElementById('catLabel').textContent = labels[cat];
+                    document.querySelectorAll('.lv-cat-menu a').forEach(a => a.classList.remove('active-cat'));
+                    document.querySelectorAll('.lv-product-card').forEach(card => {
+                        if (card.dataset.category === cat) {
+                            card.style.display = '';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                    // Mark the correct dropdown item as active
+                    document.querySelectorAll('.lv-cat-menu a').forEach(a => {
+                        if (a.textContent.trim() === labels[cat]) a.classList.add('active-cat');
+                    });
+                }
+            }
+        })();
+    </script>
+
+
+    <script>
+    function toggleMobileNav() {
+        document.querySelector('.mobile-nav-toggle').classList.toggle('open');
+        document.getElementById('mobileNav').classList.toggle('open');
+        document.body.style.overflow = document.getElementById('mobileNav').classList.contains('open') ? 'hidden' : '';
+    }
+    </script>
+</body>
+</html>
