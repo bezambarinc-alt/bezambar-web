@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product — Bez Ambar | Luxury Diamond Jewelry</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="header-inner">
+            <button class="mobile-nav-toggle" onclick="toggleMobileNav()" aria-label="Menu"><span></span><span></span><span></span></button>
+            <nav class="header-left">
+                <div class="nav-dropdown">
+                    <a href="collection.html">Collection</a>
+                    <div class="dropdown-menu">
+                        <span class="dropdown-label">Categories</span>
+                        <a href="collection.html">All Jewelry</a>
+                        <a href="collection.html?cat=rings">Rings</a>
+                        <a href="collection.html?cat=pendants">Pendants</a>
+                        <a href="collection.html?cat=necklaces">Necklaces</a>
+                        <a href="collection.html?cat=earrings">Earrings</a>
+                        <a href="collection.html?cat=bracelets">Bracelets</a>
+                    </div>
+                </div>
+                <a href="about.html">The Inventor</a>
+                <a href="journal.html">Journal</a>
+            </nav>
+            <a href="index.html" class="logo">Bez Ambar</a>
+            <div class="header-right">
+                <a href="contact.html">Contact</a>
+                <a href="contact.html" class="header-contact-btn">Book a Consultation</a>
+            </div>
+        </div>
+    </header>
+    <div class="mobile-nav-overlay" id="mobileNav">
+        <a href="collection.html">Collection</a>
+        <span class="mobile-cat-label">Categories</span>
+        <a href="collection.html" class="mobile-cat-link">All Jewelry</a>
+        <a href="collection.html?cat=rings" class="mobile-cat-link">Rings</a>
+        <a href="collection.html?cat=pendants" class="mobile-cat-link">Pendants</a>
+        <a href="collection.html?cat=necklaces" class="mobile-cat-link">Necklaces</a>
+        <a href="collection.html?cat=earrings" class="mobile-cat-link">Earrings</a>
+        <a href="collection.html?cat=bracelets" class="mobile-cat-link">Bracelets</a>
+        <a href="about.html">The Inventor</a>
+        <a href="journal.html">Journal</a>
+        <a href="contact.html">Contact</a>
+        <a href="contact.html" class="mobile-consult-btn">Book a Consultation</a>
+    </div>
+
+    <!-- Product Detail: two-column layout -->
+    <div class="pdp-container" id="pdpContainer">
+
+        <!-- LEFT: Stacked Images -->
+        <div class="pdp-images" id="pdpImages">
+            <a href="collection.html" class="pdp-back">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 3L5 8L10 13" stroke="currentColor" stroke-width="1.5"/></svg>
+            </a>
+
+            <div class="pdp-image-slot">
+                <!-- Replace with: <img src="[PRODUCT_IMG_1]" alt="Product image 1"> -->
+                <div class="image-placeholder tall" id="pdpImgPlaceholder1"><p>Product Image 1</p></div>
+            </div>
+            <div class="pdp-image-slot">
+                <!-- Replace with: <img src="[PRODUCT_IMG_2]" alt="Product image 2"> -->
+                <div class="image-placeholder tall"><p>Product Image 2</p></div>
+            </div>
+            <div class="pdp-image-slot">
+                <!-- Replace with: <img src="[PRODUCT_IMG_3]" alt="Product image 3"> -->
+                <div class="image-placeholder tall"><p>Product Image 3</p></div>
+            </div>
+            <div class="pdp-image-slot">
+                <!-- Replace with: <img src="[PRODUCT_IMG_4]" alt="Product image 4"> -->
+                <div class="image-placeholder tall"><p>Product Image 4 — Detail Shot</p></div>
+            </div>
+        </div>
+
+        <!-- RIGHT: Product Details (sticky) -->
+        <div class="pdp-details" id="pdpDetails">
+
+            <p class="pdp-sku" id="pdpSku">BA-001</p>
+
+            <h1 class="pdp-title" id="pdpTitle">Family Signature Pendant</h1>
+
+            <p class="pdp-price" id="pdpPrice">Starting from $5,000</p>
+
+            <a href="mailto:bez@bezambar.com?subject=Inquiry%20-%20Family%20Signature%20Pendant" class="pdp-cta-btn" id="pdpCta">Inquire Now</a>
+
+            <a href="contact.html" class="pdp-advisor-link">Contact an Advisor</a>
+
+            <div class="pdp-description" id="pdpDesc">
+                Each Family Signature Pendant is a bespoke creation, designed in collaboration with you at our Los Angeles atelier. Using Bez Ambar's proprietary diamond cuts — the Princess Cut, the Blaze Cut, and the Quadrillion — every piece is a one-of-a-kind expression of your family's story. Handcrafted in 18-karat gold with ethically sourced diamonds.
+            </div>
+            <button class="pdp-read-more" onclick="toggleDesc()">Read more</button>
+
+            <div class="pdp-accordion">
+                <div class="pdp-accordion-item">
+                    <button class="pdp-accordion-btn" onclick="toggleAccordion(this)">
+                        Materials &amp; Specifications <span class="plus">+</span>
+                    </button>
+                    <div class="pdp-accordion-content">
+                        <div class="pdp-accordion-content-inner" id="pdpSpecs">
+                            18-Karat Gold (Yellow, White, or Rose)<br>
+                            Ethically sourced natural diamonds<br>
+                            Proprietary Princess, Blaze, or Quadrillion cut<br>
+                            Handcrafted in Los Angeles<br>
+                            Signed and numbered by Bez Ambar
+                        </div>
+                    </div>
+                </div>
+                <div class="pdp-accordion-item">
+                    <button class="pdp-accordion-btn" onclick="toggleAccordion(this)">
+                        Provenance &amp; Certification <span class="plus">+</span>
+                    </button>
+                    <div class="pdp-accordion-content">
+                        <div class="pdp-accordion-content-inner">
+                            Every piece ships with a signed Certificate of Provenance from Bez Ambar, documenting the design process, materials, and proprietary cut used. All diamonds are certified by GIA or equivalent independent laboratory.
+                        </div>
+                    </div>
+                </div>
+                <div class="pdp-accordion-item">
+                    <button class="pdp-accordion-btn" onclick="toggleAccordion(this)">
+                        Care Instructions <span class="plus">+</span>
+                    </button>
+                    <div class="pdp-accordion-content">
+                        <div class="pdp-accordion-content-inner">
+                            Store in the provided Bez Ambar presentation box when not worn. Clean gently with a soft, lint-free cloth. Avoid contact with perfumes, lotions, and chemicals. Professional cleaning available at our LA atelier — complimentary for life.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pdp-extra-links">
+                <a href="contact.html" class="pdp-extra-link">
+                    Visit Our Atelier <span>›</span>
+                </a>
+                <a href="contact.html" class="pdp-extra-link">
+                    Gifting &amp; Presentation <span>›</span>
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- You May Also Like -->
+    <section class="pdp-related">
+        <h2>You May Also Like</h2>
+        <div class="pdp-related-grid" id="relatedGrid">
+            <a href="product.html?id=heart-ruby" class="lv-product-card">
+                <div class="lv-card-img">
+                    <div class="image-placeholder"><p>The Heart Ruby</p></div>
+                </div>
+                <svg class="lv-card-wishlist" viewBox="0 0 24 24" fill="none"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="currentColor" stroke-width="1.5"/></svg>
+                <div class="lv-card-info">
+                    <h3>The Heart Ruby</h3>
+                    <p class="lv-card-price">Price Upon Request</p>
+                </div>
+            </a>
+            <a href="product.html?id=blaze-pendant" class="lv-product-card">
+                <div class="lv-card-img">
+                    <div class="image-placeholder"><p>Blaze Diamond Pendant</p></div>
+                </div>
+                <svg class="lv-card-wishlist" viewBox="0 0 24 24" fill="none"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="currentColor" stroke-width="1.5"/></svg>
+                <div class="lv-card-info">
+                    <h3>Blaze Diamond Pendant</h3>
+                    <p class="lv-card-price">Starting from $3,000</p>
+                </div>
+            </a>
+            <a href="product.html?id=princess-ring" class="lv-product-card">
+                <div class="lv-card-img">
+                    <div class="image-placeholder"><p>Princess Cut Ring</p></div>
+                </div>
+                <svg class="lv-card-wishlist" viewBox="0 0 24 24" fill="none"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="currentColor" stroke-width="1.5"/></svg>
+                <div class="lv-card-info">
+                    <h3>Princess Cut Ring</h3>
+                    <p class="lv-card-price">Starting from $5,500</p>
+                </div>
+            </a>
+            <a href="product.html?id=alara-studs" class="lv-product-card">
+                <div class="lv-card-img">
+                    <div class="image-placeholder"><p>Alara Stud Earrings</p></div>
+                </div>
+                <svg class="lv-card-wishlist" viewBox="0 0 24 24" fill="none"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="currentColor" stroke-width="1.5"/></svg>
+                <div class="lv-card-info">
+                    <h3>Alara Stud Earrings</h3>
+                    <p class="lv-card-price">Starting from $4,500</p>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-top">
+                <div class="footer-col"><h4>Explore</h4><a href="collection.html">Collection</a><a href="about.html">The Inventor</a><a href="journal.html">Journal</a><a href="mothers_day_landing_page">Mother's Day</a></div>
+                <div class="footer-col"><h4>Services</h4><a href="contact.html">Bespoke Design</a><a href="contact.html">Repairs &amp; Cleaning</a><a href="contact.html">Personalization</a></div>
+                <div class="footer-col"><h4>Help</h4><a href="contact.html">Contact Us</a><a href="mailto:bez@bezambar.com">Email Us</a><a href="https://www.bezambar.com" target="_blank">Legacy Website</a></div>
+                <div class="footer-col"><h4>Visit</h4><p>611 Wilshire Blvd</p><p>Los Angeles, CA 90017</p><p style="margin-top:8px;"><a href="mailto:bez@bezambar.com">bez@bezambar.com</a></p></div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-logo">BEZ AMBAR</div>
+                <div class="footer-legal">&copy; 2026 Bez Ambar Inc. All rights reserved. &middot; <a href="#">Privacy Policy</a> &middot; <a href="#">Terms</a></div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Accordion toggle
+        function toggleAccordion(btn) {
+            const content = btn.nextElementSibling;
+            const isOpen = btn.classList.contains('open');
+            // Close all
+            document.querySelectorAll('.pdp-accordion-btn').forEach(b => {
+                b.classList.remove('open');
+                b.nextElementSibling.style.maxHeight = null;
+            });
+            if (!isOpen) {
+                btn.classList.add('open');
+                content.style.maxHeight = content.scrollHeight + 'px';
+            }
+        }
+
+        // Read more toggle
+        function toggleDesc() {
+            const desc = document.querySelector('.pdp-description');
+            const btn = document.querySelector('.pdp-read-more');
+            desc.classList.toggle('expanded');
+            btn.textContent = desc.classList.contains('expanded') ? 'Read less' : 'Read more';
+        }
+
+        // Product data — drives the page based on URL ?id= param
+        const products = {
+            'family-pendant': {
+                title: 'Family Signature Pendant',
+                sku: 'BA-FSP-001',
+                price: 'Starting from $5,000',
+                category: 'pendants',
+                cta: 'Begin Your Design',
+                desc: 'Each Family Signature Pendant is a bespoke creation, designed in collaboration with you at our Los Angeles atelier. Using Bez Ambar\'s proprietary diamond cuts — the Princess Cut, the Blaze Cut, and the Quadrillion — every piece is a one-of-a-kind expression of your family\'s story. Handcrafted in 18-karat gold with ethically sourced diamonds.',
+                specs: '18-Karat Gold (Yellow, White, or Rose)<br>Ethically sourced natural diamonds<br>Proprietary Princess, Blaze, or Quadrillion cut<br>Handcrafted in Los Angeles<br>Signed and numbered by Bez Ambar',
+                images: ['Family Signature Pendant — Front', 'Family Signature Pendant — Detail', 'Family Signature Pendant — On Model', 'Family Signature Pendant — Box'],
+                related: ['heart-ruby', 'blaze-pendant', 'blaze-necklace', 'alara-studs']
+            },
+            'heart-ruby': {
+                title: 'The Heart Ruby',
+                sku: 'BA-HR-001',
+                price: 'Price Upon Request',
+                category: 'pendants',
+                cta: 'Inquire Now',
+                desc: 'The Heart Ruby is a singular masterpiece featuring a rare, natural ruby cut in Bez Ambar\'s proprietary Heart shape, surrounded by a halo of brilliant-cut diamonds. Set in 18-karat rose gold, this pendant captures the light and emotion of the world\'s most precious gemstone. Available for immediate delivery.',
+                specs: '18-Karat Rose Gold<br>Natural Heart-Cut Ruby (GRS certified)<br>Brilliant-cut diamond halo<br>Total carat weight available upon request<br>Ships with Bez Ambar presentation box',
+                images: ['The Heart Ruby — Front', 'The Heart Ruby — Close-Up', 'The Heart Ruby — Side Profile', 'The Heart Ruby — Certificate'],
+                related: ['family-pendant', 'blaze-pendant', 'princess-ring', 'alara-drops']
+            },
+            'blaze-pendant': {
+                title: 'Blaze Diamond Pendant',
+                sku: 'BA-BDP-001',
+                price: 'Starting from $3,000',
+                category: 'pendants',
+                cta: 'Inquire Now',
+                desc: 'The Blaze Diamond Pendant showcases Bez Ambar\'s patented Blaze Cut — a proprietary 13-facet diamond cut that creates extraordinary fire and brilliance. Set in your choice of 18-karat gold, this pendant is the perfect canvas for one of the world\'s most innovative diamond cuts.',
+                specs: '18-Karat Gold (Yellow, White, or Rose)<br>Patented Blaze Cut diamonds<br>Available in multiple carat weights<br>Adjustable 16-18" chain<br>GIA certified diamonds',
+                images: ['Blaze Diamond Pendant — Front', 'Blaze Diamond Pendant — Sparkle', 'Blaze Diamond Pendant — Chain Detail', 'Blaze Diamond Pendant — Box'],
+                related: ['family-pendant', 'heart-ruby', 'blaze-necklace', 'blaze-bracelet']
+            },
+            'princess-ring': {
+                title: 'Princess Cut Ring',
+                sku: 'BA-PCR-001',
+                price: 'Starting from $5,500',
+                category: 'rings',
+                cta: 'Inquire Now',
+                desc: 'The ring that started it all. Featuring Bez Ambar\'s original invention — the Princess Cut diamond — this ring is a testament to four decades of innovation in diamond cutting. The square brilliant cut maximizes fire and light return, creating a ring that is both timeless and unmistakably modern.',
+                specs: '18-Karat Gold or Platinum<br>Original Princess Cut center diamond<br>Available from 0.5ct to 5ct+<br>GIA certified<br>Handset in Los Angeles',
+                images: ['Princess Cut Ring — Top', 'Princess Cut Ring — Side', 'Princess Cut Ring — On Hand', 'Princess Cut Ring — Detail'],
+                related: ['blaze-engagement', 'quadrillion-ring', 'alara-studs', 'tennis-bracelet']
+            },
+            'alara-studs': {
+                title: 'Alara Stud Earrings',
+                sku: 'BA-ASE-001',
+                price: 'Starting from $4,500',
+                category: 'earrings',
+                cta: 'Inquire Now',
+                desc: 'The Alara Stud Earrings feature Bez Ambar\'s Blaze Cut diamonds in an elegant four-prong setting. Designed for everyday luxury, these studs catch and reflect light from every angle, making them the perfect companion for any occasion.',
+                specs: '18-Karat Gold (Yellow, White, or Rose)<br>Matched pair of Blaze Cut diamonds<br>Four-prong butterfly back<br>Available from 0.5ct to 3ct total weight<br>GIA certified',
+                images: ['Alara Studs — Front', 'Alara Studs — Side', 'Alara Studs — On Ear', 'Alara Studs — Pair Detail'],
+                related: ['alara-drops', 'princess-earrings', 'blaze-pendant', 'family-pendant']
+            },
+            'tennis-bracelet': {
+                title: 'Diamond Tennis Bracelet',
+                sku: 'BA-DTB-001',
+                price: 'Starting from $8,000',
+                category: 'bracelets',
+                cta: 'Inquire Now',
+                desc: 'A continuous ribbon of Bez Ambar\'s proprietary Blaze Cut diamonds, set in 18-karat gold. The tennis bracelet is reimagined with cuts that produce exceptional fire — each diamond precisely matched for color, clarity, and brilliance.',
+                specs: '18-Karat Gold (Yellow, White, or Rose)<br>Blaze Cut diamonds throughout<br>Secure box clasp with safety<br>7" standard length (customizable)<br>Total carat weight varies by size',
+                images: ['Tennis Bracelet — Flat', 'Tennis Bracelet — Draped', 'Tennis Bracelet — Clasp', 'Tennis Bracelet — On Wrist'],
+                related: ['blaze-bracelet', 'princess-ring', 'alara-studs', 'blaze-pendant']
+            },
+            'blaze-necklace': {
+                title: 'Blaze Halo Necklace',
+                sku: 'BA-BHN-001',
+                price: 'Starting from $6,000',
+                category: 'necklaces',
+                cta: 'Inquire Now',
+                desc: 'The Blaze Halo Necklace features a center stone surrounded by a halo of patented Blaze Cut diamonds, creating an aureole of extraordinary fire. Suspended on an 18-karat gold chain, this necklace commands attention with quiet confidence.',
+                specs: '18-Karat Gold (Yellow, White, or Rose)<br>Center stone + Blaze Cut halo<br>Available in multiple carat weights<br>Adjustable 16-18" chain<br>GIA certified',
+                images: ['Blaze Halo Necklace — Front', 'Blaze Halo Necklace — Detail', 'Blaze Halo Necklace — On Model', 'Blaze Halo Necklace — Box'],
+                related: ['blaze-pendant', 'heart-ruby', 'family-pendant', 'alara-drops']
+            },
+            'alara-drops': {
+                title: 'Alara Drop Earrings',
+                sku: 'BA-ADE-001',
+                price: 'Starting from $5,000',
+                category: 'earrings',
+                cta: 'Inquire Now',
+                desc: 'The Alara Drop Earrings combine the elegance of a drop silhouette with the brilliance of Bez Ambar\'s Blaze Cut diamonds. Each earring features a graduated cascade of diamonds that catch the light with every movement.',
+                specs: '18-Karat Gold (Yellow, White, or Rose)<br>Blaze Cut and Brilliant Cut diamonds<br>French wire backs<br>Drop length approximately 1.5"<br>GIA certified',
+                images: ['Alara Drops — Front', 'Alara Drops — Side', 'Alara Drops — On Model', 'Alara Drops — Detail'],
+                related: ['alara-studs', 'princess-earrings', 'blaze-pendant', 'heart-ruby']
+            },
+            'blaze-engagement': {
+                title: 'Blaze Engagement Ring',
+                sku: 'BA-BER-001',
+                price: 'Starting from $7,500',
+                category: 'rings',
+                cta: 'Begin Your Design',
+                desc: 'The definitive Bez Ambar engagement ring. A brilliant center diamond is embraced by a channel of patented Blaze Cut diamonds that wrap the band, creating seamless fire from every angle. Designed to be the ring that begins your forever.',
+                specs: '18-Karat Gold or Platinum<br>Brilliant cut center diamond (0.5ct–5ct+)<br>Blaze Cut diamond channel band<br>Handset in Los Angeles<br>GIA certified center stone',
+                images: ['Blaze Engagement — Top', 'Blaze Engagement — Side', 'Blaze Engagement — On Hand', 'Blaze Engagement — Detail'],
+                related: ['princess-ring', 'quadrillion-ring', 'tennis-bracelet', 'alara-studs']
+            },
+            'quadrillion-ring': {
+                title: 'Quadrillion Diamond Ring',
+                sku: 'BA-QDR-001',
+                price: 'Starting from $6,200',
+                category: 'rings',
+                cta: 'Inquire Now',
+                desc: 'Featuring Bez Ambar\'s patented Quadrillion Cut — a square diamond cut with 49 facets that maximizes brilliance — this ring represents the pinnacle of proprietary diamond innovation. Set in 18-karat gold with a clean, contemporary design.',
+                specs: '18-Karat Gold or Platinum<br>Patented Quadrillion Cut center<br>Available in multiple carat weights<br>Handcrafted in Los Angeles<br>GIA certified',
+                images: ['Quadrillion Ring — Top', 'Quadrillion Ring — Side', 'Quadrillion Ring — Detail', 'Quadrillion Ring — On Hand'],
+                related: ['princess-ring', 'blaze-engagement', 'tennis-bracelet', 'blaze-bracelet']
+            },
+            'blaze-bracelet': {
+                title: 'Blaze Diamond Bracelet',
+                sku: 'BA-BDB-001',
+                price: 'Starting from $9,500',
+                category: 'bracelets',
+                cta: 'Inquire Now',
+                desc: 'The Blaze Diamond Bracelet is a bold statement of proprietary craftsmanship. Featuring a continuous channel of patented Blaze Cut diamonds set in 18-karat gold, this bracelet creates an unbroken ribbon of fire around the wrist.',
+                specs: '18-Karat Gold (Yellow, White, or Rose)<br>Full channel of Blaze Cut diamonds<br>Secure clasp with safety chain<br>7" standard (customizable)<br>Total carat weight varies',
+                images: ['Blaze Bracelet — Top', 'Blaze Bracelet — Side', 'Blaze Bracelet — On Wrist', 'Blaze Bracelet — Clasp'],
+                related: ['tennis-bracelet', 'blaze-pendant', 'princess-ring', 'alara-studs']
+            },
+            'princess-earrings': {
+                title: 'Princess Halo Earrings',
+                sku: 'BA-PHE-001',
+                price: 'Starting from $5,800',
+                category: 'earrings',
+                cta: 'Inquire Now',
+                desc: 'Princess Cut center diamonds surrounded by a delicate halo of brilliant-cut diamonds. These earrings celebrate Bez Ambar\'s most iconic invention with a classic design that transitions from day to evening with effortless elegance.',
+                specs: '18-Karat Gold (Yellow, White, or Rose)<br>Princess Cut center diamonds<br>Brilliant-cut diamond halos<br>Push-back post<br>GIA certified',
+                images: ['Princess Halo Earrings — Front', 'Princess Halo Earrings — Side', 'Princess Halo Earrings — On Ear', 'Princess Halo Earrings — Detail'],
+                related: ['alara-studs', 'alara-drops', 'princess-ring', 'blaze-pendant']
+            }
+        };
+
+        // All products data for related section
+        const allProducts = {
+            'family-pendant': { title: 'Family Signature Pendant', price: 'Starting from $5,000' },
+            'heart-ruby': { title: 'The Heart Ruby', price: 'Price Upon Request' },
+            'blaze-pendant': { title: 'Blaze Diamond Pendant', price: 'Starting from $3,000' },
+            'princess-ring': { title: 'Princess Cut Ring', price: 'Starting from $5,500' },
+            'alara-studs': { title: 'Alara Stud Earrings', price: 'Starting from $4,500' },
+            'tennis-bracelet': { title: 'Diamond Tennis Bracelet', price: 'Starting from $8,000' },
+            'blaze-necklace': { title: 'Blaze Halo Necklace', price: 'Starting from $6,000' },
+            'alara-drops': { title: 'Alara Drop Earrings', price: 'Starting from $5,000' },
+            'blaze-engagement': { title: 'Blaze Engagement Ring', price: 'Starting from $7,500' },
+            'quadrillion-ring': { title: 'Quadrillion Diamond Ring', price: 'Starting from $6,200' },
+            'blaze-bracelet': { title: 'Blaze Diamond Bracelet', price: 'Starting from $9,500' },
+            'princess-earrings': { title: 'Princess Halo Earrings', price: 'Starting from $5,800' }
+        };
+
+        // Load product from URL param
+        (function() {
+            const params = new URLSearchParams(window.location.search);
+            const id = params.get('id');
+            const product = products[id];
+            if (!product) return;
+
+            // Update page
+            document.title = product.title + ' — Bez Ambar | Luxury Diamond Jewelry';
+            document.getElementById('pdpSku').textContent = product.sku;
+            document.getElementById('pdpTitle').textContent = product.title;
+            document.getElementById('pdpPrice').textContent = product.price;
+            document.getElementById('pdpDesc').textContent = product.desc;
+            document.getElementById('pdpSpecs').innerHTML = product.specs;
+
+            // Update CTA
+            const ctaBtn = document.getElementById('pdpCta');
+            ctaBtn.textContent = product.cta;
+            ctaBtn.href = 'mailto:bez@bezambar.com?subject=Inquiry%20-%20' + encodeURIComponent(product.title);
+
+            // Update image placeholders
+            const imgSlots = document.querySelectorAll('.pdp-image-slot .image-placeholder p');
+            product.images.forEach((label, i) => {
+                if (imgSlots[i]) imgSlots[i].textContent = label;
+            });
+
+            // Update related products
+            if (product.related) {
+                const grid = document.getElementById('relatedGrid');
+                grid.innerHTML = '';
+                product.related.forEach(relId => {
+                    const rel = allProducts[relId];
+                    if (!rel) return;
+                    grid.innerHTML += `
+                        <a href="product.html?id=${relId}" class="lv-product-card">
+                            <div class="lv-card-img">
+                                <div class="image-placeholder"><p>${rel.title}</p></div>
+                            </div>
+                            <svg class="lv-card-wishlist" viewBox="0 0 24 24" fill="none"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="currentColor" stroke-width="1.5"/></svg>
+                            <div class="lv-card-info">
+                                <h3>${rel.title}</h3>
+                                <p class="lv-card-price">${rel.price}</p>
+                            </div>
+                        </a>
+                    `;
+                });
+            }
+        })();
+    </script>
+
+
+    <script>
+    function toggleMobileNav() {
+        document.querySelector('.mobile-nav-toggle').classList.toggle('open');
+        document.getElementById('mobileNav').classList.toggle('open');
+        document.body.style.overflow = document.getElementById('mobileNav').classList.contains('open') ? 'hidden' : '';
+    }
+    </script>
+</body>
+</html>
