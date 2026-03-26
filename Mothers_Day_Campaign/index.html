@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bez Ambar — Inventor of the Princess Cut | Luxury Diamonds, Los Angeles</title>
+    <title>Bez Ambar â Inventor of the Princess Cut | Luxury Diamonds, Los Angeles</title>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <style>
@@ -343,6 +343,22 @@
             .cat-window-label { padding: 20px 16px; }
             .cat-window-name { font-size: 20px; }
         }
+    
+        /* --- Nested Dropdown (Earrings sub-menu) --- */
+        .dropdown-nested { position: relative; }
+        .dropdown-nested > a { display: flex !important; align-items: center; justify-content: space-between; padding: 10px 24px; font-family: 'Montserrat', sans-serif; font-size: 12px; font-weight: 400; letter-spacing: 1px; text-transform: uppercase; text-decoration: none; color: inherit; transition: all 0.2s; line-height: 1.4; }
+        .dropdown-nested > a::after { content: '\203A'; font-size: 16px; margin-left: 8px; transition: transform 0.2s; }
+        .dropdown-nested:hover > a { background: #faf7f2; color: #1a1a1a !important; }
+        .dropdown-submenu { position: absolute; left: 100%; top: 0; min-width: 180px; background: #1a1a1a; border: 1px solid rgba(255,255,255,0.08); padding: 12px 0; opacity: 0; visibility: hidden; transform: translateX(-8px); transition: all 0.25s ease; z-index: 210; }
+        .dropdown-nested:hover .dropdown-submenu { opacity: 1; visibility: visible; transform: translateX(0); }
+        .dropdown-submenu a { display: block; padding: 8px 24px; font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 400; letter-spacing: 1px; text-transform: uppercase; text-decoration: none; color: rgba(255,255,255,0.85); transition: all 0.2s; white-space: nowrap; }
+        .dropdown-submenu a:hover { background: #faf7f2; color: #1a1a1a; }
+        .mobile-sub-link { padding-left: 36px !important; font-size: 13px !important; opacity: 0.75; }
+        @media (max-width: 900px) {
+            .dropdown-submenu { position: static; border: none; padding: 0; opacity: 1; visibility: visible; transform: none; background: rgba(255,255,255,0.03); min-width: auto; }
+            .dropdown-submenu a { padding-left: 40px; font-size: 11px; }
+            .dropdown-nested > a::after { transform: rotate(90deg); }
+        }
     </style>
 </head>
 <body>
@@ -360,7 +376,14 @@
                         <a href="collection.html?cat=rings">Rings</a>
                         <a href="collection.html?cat=pendants">Pendants</a>
                         <a href="collection.html?cat=necklaces">Necklaces</a>
-                        <a href="collection.html?cat=earrings">Earrings</a>
+                        <div class="dropdown-nested">
+                            <a href="collection.html?cat=earrings">Earrings</a>
+                            <div class="dropdown-submenu">
+                                <a href="collection.html?cat=stud-earrings">Stud Earrings</a>
+                                <a href="collection.html?cat=hug-earrings">Hug Earrings</a>
+                                <a href="collection.html?cat=hoop-earrings">Hoop Earrings</a>
+                            </div>
+                        </div>
                         <a href="collection.html?cat=bracelets">Bracelets</a>
                     </div>
                 </div>
@@ -382,6 +405,9 @@
         <a href="collection.html?cat=pendants" class="mobile-cat-link">Pendants</a>
         <a href="collection.html?cat=necklaces" class="mobile-cat-link">Necklaces</a>
         <a href="collection.html?cat=earrings" class="mobile-cat-link">Earrings</a>
+        <a href="collection.html?cat=stud-earrings" class="mobile-cat-link mobile-sub-link">Stud Earrings</a>
+        <a href="collection.html?cat=hug-earrings" class="mobile-cat-link mobile-sub-link">Hug Earrings</a>
+        <a href="collection.html?cat=hoop-earrings" class="mobile-cat-link mobile-sub-link">Hoop Earrings</a>
         <a href="collection.html?cat=bracelets" class="mobile-cat-link">Bracelets</a>
         <a href="about.html">The Inventor</a>
         <a href="journal.html">Journal</a>
@@ -389,7 +415,7 @@
         <a href="contact.html" class="mobile-consult-btn">Book a Consultation</a>
     </div>
 
-    <!-- ==================== BLOCK 1: Hero — Mother's Day (Video Background) ==================== -->
+    <!-- ==================== BLOCK 1: Hero â Mother's Day (Video Background) ==================== -->
     <section class="hero-video-block">
         <video class="hero-video" autoplay muted loop playsinline>
             <source src="https://res.cloudinary.com/dlg2mou53/video/upload/q_auto/BezAmbar-OldSite/2023/04/6.24-Fancy-Intense-Pink-Emerald-cut-in-Gabour-ring_1.mp4" type="video/mp4">
@@ -403,7 +429,7 @@
         </div>
     </section>
 
-    <!-- ==================== BLOCK 2: Shop by Category — Full-Width Windows ==================== -->
+    <!-- ==================== BLOCK 2: Shop by Category â Full-Width Windows ==================== -->
     <section class="cat-windows">
         <div class="cat-windows-grid">
             <a href="collection.html?cat=rings" class="cat-window">
