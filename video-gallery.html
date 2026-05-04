@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bespoke Commissions — Bez Ambar</title>
+    <title>Video Gallery — Bez Ambar</title>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <style>
@@ -12,7 +12,12 @@
         .site-footer { background: #0a0a0a; border-top: 1px solid rgba(255,255,255,0.06); }
         .services-strip { background: #111; border-top: 1px solid rgba(255,255,255,0.08); }
 
-        /* Header overrides removed — site-wide white header is now used on this page too. */
+        /* ── Header overrides for dark gallery ── */
+        .site-header { background: #0d0d0d; border-bottom: 1px solid rgba(255,255,255,0.06); }
+        .header-left a, .header-right a { color: #bbb; font-size: 12px; letter-spacing: 2px; }
+        .header-left a:hover, .header-right a:hover { color: #fff; }
+        .logo { font-size: 26px; letter-spacing: 6px; color: #fff; }
+        .header-contact-btn { color: #c5a258; border-color: #c5a258; }
 
         /* ── Compact hero ── */
         .video-gallery-hero {
@@ -41,7 +46,7 @@
         /* ── Grid — luxury spacing ── */
         .video-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(4, 1fr);
             gap: 14px;
             background: #0d0d0d;
             padding: 0 40px;
@@ -270,13 +275,10 @@
                 </a>
             </div>
             <div class="mobile-nav-overlay" id="mobileNav">
-                <a href="collection.html">At the Bench</a>
+                <a href="collection.html">Collection</a>
                 <span class="mobile-cat-label">Categories</span>
                 <a href="collection.html" class="mobile-cat-link">All Jewelry</a>
-                <!-- BEGIN HIDDEN SUBCATS (restore when products have images) -->
-
-                <!--
-<a href="collection.html?cat=rings" class="mobile-cat-link">Rings</a>
+                <a href="collection.html?cat=rings" class="mobile-cat-link">Rings</a>
                 <a href="collection.html?cat=engagement-rings" class="mobile-cat-link mobile-sub-link">Engagement Rings</a>
                 <a href="collection.html?cat=wedding-bands" class="mobile-cat-link mobile-sub-link">Wedding Bands</a>
                 <a href="collection.html?cat=mens-wedding-bands" class="mobile-cat-link mobile-sub-link">Men's Wedding Bands</a>
@@ -287,25 +289,24 @@
                 <a href="collection.html?cat=hug-earrings" class="mobile-cat-link mobile-sub-link">Hug Earrings</a>
                 <a href="collection.html?cat=hoop-earrings" class="mobile-cat-link mobile-sub-link">Hoop Earrings</a>
                 <a href="collection.html?cat=bracelets" class="mobile-cat-link">Bracelets</a>
-
-                -->
-
-                <!-- END HIDDEN SUBCATS -->
-                <a href="video-gallery.html">Bespoke Commissions</a>
-                <a href="journal.html">Journal</a>
+                <a href="video-gallery.html">Video Gallery</a>
                 <a href="our-story.html" class="mobile-cat-label" style="text-decoration:none;">Our Story</a>
                 <a href="about.html" class="mobile-cat-link">The Inventor</a>
                 <a href="the-bez-ambar-story.html" class="mobile-cat-link">The Bez Ambar Story</a>
+                <a href="journal.html" class="mobile-cat-link">Journal</a>
                 <a href="blog.html" class="mobile-cat-link">Blog</a>
+                <a href="diamond-education.html" class="mobile-cat-link">Diamond Education</a>
                 <a href="ring-size-chart.html" class="mobile-cat-link">Ring Size Chart</a>
+                <a href="catalogs.html" class="mobile-cat-link">Catalogs</a>
                 <a href="warranty.html" class="mobile-cat-link">Warranty</a>
+                <a href="press.html" class="mobile-cat-link">Press</a>
             </div>
         </div>
     </header>
     <div class="nav-backdrop" id="navBackdrop"></div>
 
     <div class="video-gallery-hero">
-        <h1>Bespoke Commissions</h1>
+        <h1>Video Gallery</h1>
         <p>Experience the brilliance of Bez Ambar's creations in motion</p>
     </div>
 
@@ -3582,7 +3583,7 @@
     <footer class="site-footer">
         <div class="footer-inner">
             <div class="footer-top">
-                <div class="footer-col"><h4>Explore</h4><a href="collection.html">At the Bench</a><a href="video-gallery.html">Bespoke Commissions</a><a href="about.html">The Inventor</a><a href="journal.html">Journal</a><a href="blog.html">Blog</a></div>
+                <div class="footer-col"><h4>Explore</h4><a href="collection.html">Collection</a><a href="video-gallery.html">Video Gallery</a><a href="about.html">The Inventor</a><a href="journal.html">Journal</a><a href="blog.html">Blog</a></div>
                 <div class="footer-col"><h4>Services</h4><a href="contact.html">Bespoke Design</a><a href="contact.html">Repairs &amp; Cleaning</a><a href="contact.html">Personalization</a></div>
                 <div class="footer-col"><h4>Help</h4><a href="contact.html">Contact Us</a><a href="mailto:bez@bezambar.com">Email Us</a><a href="ring-size-chart.html">Ring Size Chart</a><a href="diamond-education.html">Diamond Education</a><a href="warranty.html">Warranty</a></div>
                 <div class="footer-col"><h4>Visit</h4><p>611 Wilshire Blvd</p><p>Los Angeles, CA 90017</p><p style="margin-top:8px;"><a href="mailto:bez@bezambar.com">bez@bezambar.com</a></p></div>
