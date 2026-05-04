@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recent Creations — Luxury Diamond Jewelry | Bez Ambar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="header-inner">
+            <div class="header-left-group">
+                <button class="mobile-nav-toggle" onclick="toggleMobileNav()" aria-label="Menu"><span></span><span></span><span></span></button>
+                <span class="menu-label" onclick="toggleMobileNav()">Menu</span>
+                <button class="header-icon-btn header-search-btn" aria-label="Search">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                </button>
+            </div>
+            <a href="index.html" class="logo">Bez Ambar</a>
+            <div class="header-right-group">
+                <a href="contact.html" class="header-contact-link">Contact Us</a>
+                <a href="#" class="header-icon-btn" aria-label="Wishlist">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                </a>
+                <a href="#" class="header-icon-btn" aria-label="Account">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                </a>
+            </div>
+            <div class="mobile-nav-overlay" id="mobileNav">
+                <a href="collection.html">At the Bench</a>
+                <span class="mobile-cat-label">Categories</span>
+                <a href="collection.html" class="mobile-cat-link">All Jewelry</a>
+                <!-- BEGIN HIDDEN SUBCATS (restore when products have images) -->
+
+                <!--
+<a href="collection.html?cat=rings" class="mobile-cat-link">Rings</a>
+                <a href="collection.html?cat=engagement-rings" class="mobile-cat-link mobile-sub-link">Engagement Rings</a>
+                <a href="collection.html?cat=wedding-bands" class="mobile-cat-link mobile-sub-link">Wedding Bands</a>
+                <a href="collection.html?cat=mens-wedding-bands" class="mobile-cat-link mobile-sub-link">Men's Wedding Bands</a>
+                <a href="collection.html?cat=pendants" class="mobile-cat-link">Pendants</a>
+                <a href="collection.html?cat=necklaces" class="mobile-cat-link">Necklaces</a>
+                <a href="collection.html?cat=earrings" class="mobile-cat-link">Earrings</a>
+                <a href="collection.html?cat=stud-earrings" class="mobile-cat-link mobile-sub-link">Stud Earrings</a>
+                <a href="collection.html?cat=hug-earrings" class="mobile-cat-link mobile-sub-link">Hug Earrings</a>
+                <a href="collection.html?cat=hoop-earrings" class="mobile-cat-link mobile-sub-link">Hoop Earrings</a>
+                <a href="collection.html?cat=bracelets" class="mobile-cat-link">Bracelets</a>
+
+                -->
+
+                <!-- END HIDDEN SUBCATS -->
+                <a href="video-gallery.html">Bespoke Commissions</a>
+                <a href="journal.html">Journal</a>
+                <a href="our-story.html" class="mobile-cat-label" style="text-decoration:none;">Our Story</a>
+                <a href="about.html" class="mobile-cat-link">The Inventor</a>
+                <a href="the-bez-ambar-story.html" class="mobile-cat-link">The Bez Ambar Story</a>
+                <a href="blog.html" class="mobile-cat-link">Blog</a>
+                <a href="ring-size-chart.html" class="mobile-cat-link">Ring Size Chart</a>
+                <a href="warranty.html" class="mobile-cat-link">Warranty</a>
+            </div>
+        </div>
+    </header>
+    <div class="nav-backdrop" id="navBackdrop"></div>
+
+    <!-- LV-Style Category Bar -->
+    <div class="lv-collection-bar">
+        <div class="lv-cat-dropdown" id="catDropdown">
+            <button onclick="document.getElementById('catDropdown').classList.toggle('open')">
+                <span id="catLabel">All Jewelry</span>
+                <svg viewBox="0 0 10 6" fill="none"><path d="M1 1 L5 5 L9 1" stroke="currentColor" stroke-width="1.2"/></svg>
+            </button>
+            <div class="lv-cat-menu">
+                <span class="cat-label">Categories</span>
+                <a href="#" class="active-cat" onclick="filterLV('all', 'All Jewelry', event)">All Jewelry</a>
+                <a href="#" onclick="filterLV('rings', 'Rings', event)">Rings</a>
+                <a href="#" onclick="filterLV('engagement-rings', 'Engagement Rings', event)" style="padding-left:28px;font-size:11px;">Engagement Rings</a>
+                <a href="#" onclick="filterLV('wedding-bands', 'Wedding Bands', event)" style="padding-left:28px;font-size:11px;">Wedding Bands</a>
+                <a href="#" onclick="filterLV('mens-wedding-bands', 'Men\'s Wedding Bands', event)" style="padding-left:28px;font-size:11px;">Men's Wedding Bands</a>
+                <a href="#" onclick="filterLV('pendants', 'Pendants', event)">Pendants</a>
+                <a href="#" onclick="filterLV('necklaces', 'Necklaces', event)">Necklaces</a>
+                <a href="#" onclick="filterLV('earrings', 'Earrings', event)">Earrings</a>
+                <a href="#" onclick="filterLV('stud-earrings', 'Stud Earrings', event)" style="padding-left:28px;font-size:11px;">Stud Earrings</a>
+                <a href="#" onclick="filterLV('hug-earrings', 'Hug Earrings', event)" style="padding-left:28px;font-size:11px;">Hug Earrings</a>
+                <a href="#" onclick="filterLV('hoop-earrings', 'Hoop Earrings', event)" style="padding-left:28px;font-size:11px;">Hoop Earrings</a>
+                <a href="#" onclick="filterLV('bracelets', 'Bracelets', event)">Bracelets</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Subcategory thumbnails removed -->
+
+    <!-- LV-Style Product Grid -->
+    <div class="lv-collection-grid" id="productGrid">
+        <!-- Nonchalance — White Gold Diamond Bracelet -->
+        <a href="product-nonchalance.html" class="lv-product-card" data-category="bracelets">
+            <div class="lv-card-img">
+                <img src="https://res.cloudinary.com/dlg2mou53/image/upload/f_auto,q_auto,w_1000/v1777441136/white_gold_nonchelance_1_j4xwos.png" alt="Nonchalance — White Gold Diamond Bracelet">
+            </div>
+            <svg class="lv-card-wishlist" viewBox="0 0 24 24" fill="none"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="currentColor" stroke-width="1.5"/></svg>
+            <div class="lv-card-info">
+                <h3>Nonchalance</h3>
+                <p class="lv-card-price">View More</p>
+            </div>
+        </a>
+
+        <!-- Placeholder 2 -->
+        <a href="product-blank.html" class="lv-product-card" data-category="rings">
+            <div class="lv-card-img"></div>
+            <svg class="lv-card-wishlist" viewBox="0 0 24 24" fill="none"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="currentColor" stroke-width="1.5"/></svg>
+            <div class="lv-card-info">
+                <h3>Product 2</h3>
+                <p class="lv-card-price">View More</p>
+            </div>
+        </a>
+
+        <!-- Placeholder 3 -->
+        <a href="product-blank.html" class="lv-product-card" data-category="rings">
+            <div class="lv-card-img"></div>
+            <svg class="lv-card-wishlist" viewBox="0 0 24 24" fill="none"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="currentColor" stroke-width="1.5"/></svg>
+            <div class="lv-card-info">
+                <h3>Product 3</h3>
+                <p class="lv-card-price">View More</p>
+            </div>
+        </a>
+
+        <!-- Placeholder 4 -->
+        <a href="product-blank.html" class="lv-product-card" data-category="rings">
+            <div class="lv-card-img"></div>
+            <svg class="lv-card-wishlist" viewBox="0 0 24 24" fill="none"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="currentColor" stroke-width="1.5"/></svg>
+            <div class="lv-card-info">
+                <h3>Product 4</h3>
+                <p class="lv-card-price">View More</p>
+            </div>
+        </a>
+
+        <!-- Placeholder 5 -->
+        <a href="product-blank.html" class="lv-product-card" data-category="rings">
+            <div class="lv-card-img"></div>
+            <svg class="lv-card-wishlist" viewBox="0 0 24 24" fill="none"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="currentColor" stroke-width="1.5"/></svg>
+            <div class="lv-card-info">
+                <h3>Product 5</h3>
+                <p class="lv-card-price">View More</p>
+            </div>
+        </a>
+
+        <!-- Placeholder 6 -->
+        <a href="product-blank.html" class="lv-product-card" data-category="rings">
+            <div class="lv-card-img"></div>
+            <svg class="lv-card-wishlist" viewBox="0 0 24 24" fill="none"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="currentColor" stroke-width="1.5"/></svg>
+            <div class="lv-card-info">
+                <h3>Product 6</h3>
+                <p class="lv-card-price">View More</p>
+            </div>
+        </a>
+
+        <!-- Placeholder 7 -->
+        <a href="product-blank.html" class="lv-product-card" data-category="rings">
+            <div class="lv-card-img"></div>
+            <svg class="lv-card-wishlist" viewBox="0 0 24 24" fill="none"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="currentColor" stroke-width="1.5"/></svg>
+            <div class="lv-card-info">
+                <h3>Product 7</h3>
+                <p class="lv-card-price">View More</p>
+            </div>
+        </a>
+
+        <!-- Placeholder 8 -->
+        <a href="product-blank.html" class="lv-product-card" data-category="rings">
+            <div class="lv-card-img"></div>
+            <svg class="lv-card-wishlist" viewBox="0 0 24 24" fill="none"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="currentColor" stroke-width="1.5"/></svg>
+            <div class="lv-card-info">
+                <h3>Product 8</h3>
+                <p class="lv-card-price">View More</p>
+            </div>
+        </a>
+
+        <!-- Placeholder 9 -->
+        <a href="product-blank.html" class="lv-product-card" data-category="rings">
+            <div class="lv-card-img"></div>
+            <svg class="lv-card-wishlist" viewBox="0 0 24 24" fill="none"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="currentColor" stroke-width="1.5"/></svg>
+            <div class="lv-card-info">
+                <h3>Product 9</h3>
+                <p class="lv-card-price">View More</p>
+            </div>
+        </a>
+
+        <!-- Placeholder 10 -->
+        <a href="product-blank.html" class="lv-product-card" data-category="rings">
+            <div class="lv-card-img"></div>
+            <svg class="lv-card-wishlist" viewBox="0 0 24 24" fill="none"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="currentColor" stroke-width="1.5"/></svg>
+            <div class="lv-card-info">
+                <h3>Product 10</h3>
+                <p class="lv-card-price">View More</p>
+            </div>
+        </a>
+    </div>
+
+    <!-- CTA -->
+    <section class="promo-banner">
+        <div class="promo-inner">
+            <p class="eyebrow">Can't Find What You're Looking For?</p>
+            <h2>Let's Create It Together</h2>
+            <p class="promo-sub">Every Bez Ambar piece can be customized. Tell us your vision and we'll bring it to life.</p>
+            <a href="contact.html" class="btn btn-primary">Start a Bespoke Design</a>
+        </div>
+    </section>
+
+    <!-- Services + Footer -->
+    <div class="services-strip">
+        <div class="services-inner">
+            <div class="service-item"><h4>Bespoke Design</h4><p>One-of-a-kind pieces<br>designed with you</p></div>
+            <div class="service-item"><h4>Complimentary Shipping</h4><p>Fully insured FedEx<br>Priority delivery</p></div>
+            <div class="service-item"><h4>Provenance Certificate</h4><p>Signed certificate<br>with every piece</p></div>
+            <div class="service-item"><h4>LA Atelier</h4><p>Visit us by appointment<br>611 Wilshire Blvd</p></div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-top">
+                <div class="footer-col"><h4>Explore</h4><a href="collection.html">At the Bench</a><a href="our-story.html">Our Story</a><a href="about.html">The Inventor</a><a href="journal.html">Journal</a><a href="blog.html">Blog</a></div>
+                <div class="footer-col"><h4>Services</h4><a href="contact.html">Bespoke Design</a><a href="contact.html">Repairs &amp; Cleaning</a><a href="contact.html">Personalization</a></div>
+                <div class="footer-col"><h4>Help</h4><a href="contact.html">Contact Us</a><a href="mailto:bez@bezambar.com">Email Us</a><a href="ring-size-chart.html">Ring Size Chart</a><a href="diamond-education.html">Diamond Education</a><a href="warranty.html">Warranty</a></div>
+                <div class="footer-col"><h4>Visit</h4><p>611 Wilshire Blvd</p><p>Los Angeles, CA 90017</p><p style="margin-top:8px;"><a href="mailto:bez@bezambar.com">bez@bezambar.com</a></p></div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-logo">BEZ AMBAR</div>
+                <div class="footer-legal">&copy; 2026 Bez Ambar Inc. All rights reserved. &middot; <a href="#">Privacy Policy</a> &middot; <a href="#">Terms</a></div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // LV-style category filter — supports subcategories via data-category (space-separated)
+        function filterLV(category, label, e) {
+            e.preventDefault();
+            document.getElementById('catLabel').textContent = label;
+            document.getElementById('catDropdown').classList.remove('open');
+
+            // Update dropdown active state
+            document.querySelectorAll('.lv-cat-menu a').forEach(a => a.classList.remove('active-cat'));
+            if (e.target.closest('.lv-cat-menu')) {
+                e.target.classList.add('active-cat');
+            }
+
+            // Update subcategory thumbnail bar active state
+            document.querySelectorAll('.lv-subcat-item').forEach(item => item.classList.remove('active'));
+            const clickedSubcat = e.target.closest('.lv-subcat-item');
+            if (clickedSubcat) clickedSubcat.classList.add('active');
+
+            // Filter products
+            document.querySelectorAll('.lv-product-card').forEach(card => {
+                const cats = card.dataset.category.split(' ');
+                if (category === 'all') {
+                    card.style.display = '';
+                } else if (category === 'earrings') {
+                    card.style.display = cats.includes('earrings') ? '' : 'none';
+                } else if (category === 'rings') {
+                    card.style.display = cats.includes('rings') ? '' : 'none';
+                } else {
+                    card.style.display = cats.includes(category) ? '' : 'none';
+                }
+            });
+        }
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(e) {
+            const dropdown = document.getElementById('catDropdown');
+            if (!dropdown.contains(e.target)) {
+                dropdown.classList.remove('open');
+            }
+        });
+
+        // Handle URL params for category pre-filtering
+        (function() {
+            const params = new URLSearchParams(window.location.search);
+            const cat = params.get('cat');
+            if (cat) {
+                const labels = {
+                    rings: 'Rings', pendants: 'Pendants', necklaces: 'Necklaces',
+                    earrings: 'Earrings', bracelets: 'Bracelets',
+                    'stud-earrings': 'Stud Earrings', 'hug-earrings': 'Hug Earrings', 'hoop-earrings': 'Hoop Earrings',
+                    'engagement-rings': 'Engagement Rings',
+                    'wedding-bands': 'Wedding Bands',
+                    'mens-wedding-bands': "Men's Wedding Bands"
+                };
+                if (labels[cat]) {
+                    document.getElementById('catLabel').textContent = labels[cat];
+                    document.querySelectorAll('.lv-cat-menu a').forEach(a => a.classList.remove('active-cat'));
+                    document.querySelectorAll('.lv-product-card').forEach(card => {
+                        const cats = card.dataset.category.split(' ');
+                        if (cat === 'earrings') {
+                            card.style.display = cats.includes('earrings') ? '' : 'none';
+                        } else {
+                            card.style.display = cats.includes(cat) ? '' : 'none';
+                        }
+                    });
+                    // Mark the correct dropdown item as active
+                    document.querySelectorAll('.lv-cat-menu a').forEach(a => {
+                        if (a.textContent.trim() === labels[cat]) a.classList.add('active-cat');
+                    });
+                }
+            }
+        })();
+    </script>
+
+    <script>
+    function toggleMobileNav() {
+        var toggle = document.querySelector('.mobile-nav-toggle');
+        var nav = document.getElementById('mobileNav');
+        var backdrop = document.getElementById('navBackdrop');
+        toggle.classList.toggle('open');
+        nav.classList.toggle('open');
+        backdrop.classList.toggle('open');
+    }
+    function closeMobileNav() {
+        document.querySelector('.mobile-nav-toggle').classList.remove('open');
+        document.getElementById('mobileNav').classList.remove('open');
+        document.getElementById('navBackdrop').classList.remove('open');
+    }
+    document.getElementById('navBackdrop').addEventListener('click', closeMobileNav);
+    </script>
+</body>
+</html>
